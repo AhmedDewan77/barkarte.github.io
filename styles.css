@@ -1,0 +1,114 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+#app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 60px 10px 10px 10px; /* Adjusted for the fixed header */
+}
+
+.category {
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.simple-drinks-list {
+  list-style-type: none; /* Removes the default bullet points */
+  padding: 0;
+}
+
+.simple-drinks-list li {
+  padding: 5px 0; /* Adds some padding for each item */
+  border-bottom: 1px solid #e0e0e0; /* Adds a light border between items */
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  z-index: 2; /* Ensure the bottom navigation is above other elements */
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom-nav img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Add padding to category details container and center it */
+#category-details {
+  display: none;
+  padding: 20px; /* Add padding to create space around the content */
+  position: fixed;
+  top: 100px; /* Position it below the "Barkarte" text box */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  max-height: calc(100vh - 160px); /* Ensure it doesn't overlap the bottom navigation */
+  overflow-y: auto; /* Enable vertical scrolling when necessary */
+  width: 80%; /* Adjust the width as needed */
+}
+
+/* Style for the category name */
+#category-name {
+  font-size: 24px; /* Increase font size for category name */
+  margin-bottom: 10px; /* Add spacing between category name and drinks list */
+}
+
+/* Style for the list of drinks */
+#category-drinks {
+  list-style-type: none; /* Removes the default bullet points */
+  padding: 0;
+}
+
+/* Style for each drink item */
+#category-drinks li {
+  padding: 5px 0; /* Adds some padding for each item */
+  border-bottom: 1px solid #e0e0e0; /* Adds a light border between items */
+}
+
+/* Hide the back button by default */
+#back-button {
+  display: none;
+}
